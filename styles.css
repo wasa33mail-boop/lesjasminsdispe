@@ -143,16 +143,16 @@ html.js-ready .reveal.is-visible{ opacity:1; transform:translateY(0); }
 .site-header{
   position:fixed; top:0; left:0; right:0; z-index:100;
   display:flex; align-items:center; justify-content:space-between;
-  padding:18px var(--gutter);
-  background:transparent;
-  transition:background .35s ease, padding .35s ease, box-shadow .35s ease;
+  padding:12px var(--gutter);
+  background:var(--sable-pale);
+  box-shadow:0 1px 0 var(--line);
+  transition:box-shadow .35s ease;
 }
 .site-header.scrolled{
-  background:rgba(250,248,242,.92);
+  background:var(--sable-pale);
   -webkit-backdrop-filter:blur(6px);
   backdrop-filter:blur(6px);
-  padding:12px var(--gutter);
-  box-shadow:0 1px 0 var(--line);
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 .brand{
   display:flex; flex-direction:column; align-items:center; gap:.3em;
@@ -178,17 +178,16 @@ html.js-ready .reveal.is-visible{ opacity:1; transform:translateY(0); }
   text-transform:uppercase;
   letter-spacing:.09em;
   font-weight:600;
-  color:rgba(250,248,242,.88);
+  color:var(--ink-soft);
   transition:color .3s ease;
   position:relative;
 }
 .site-header.scrolled .main-nav a{ color:var(--ink-soft); }
 .main-nav a:hover{ color:var(--sable); }
 .main-nav .btn{ margin-left:.4em; }
-.main-nav .btn-ghost{ }
-.site-header.scrolled .btn-ghost{
-  color:var(--ink); border-color:var(--ink);
-}
+.main-nav .btn-ghost{ color:var(--ink); border-color:var(--ink); }
+.main-nav .btn-ghost:hover{ background:var(--ink); color:var(--blanc); }
+.site-header.scrolled .btn-ghost{ color:var(--ink); border-color:var(--ink); }
 .site-header.scrolled .btn-ghost:hover{ background:var(--ink); color:var(--blanc); }
 
 .lang-switch{
@@ -199,13 +198,13 @@ html.js-ready .reveal.is-visible{ opacity:1; transform:translateY(0); }
 }
 .lang-switch button{
   background:none; border:none; padding:2px 1px;
-  color:rgba(250,248,242,.6);
+  color:var(--ink-soft);
   transition:color .25s ease;
 }
 .site-header.scrolled .lang-switch button{ color:var(--ink-soft); }
 .lang-switch button.active{
-  color:var(--blanc);
-  border-bottom:1px solid var(--sable);
+  color:var(--sauge-deep);
+  border-bottom:1px solid var(--sauge-deep);
 }
 .site-header.scrolled .lang-switch button.active{
   color:var(--sauge-deep);
