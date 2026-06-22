@@ -3,6 +3,7 @@
    Palette : vert sauge / beige sable / blanc cassé
    Display : Fraunces — Texte : Work Sans
    ========================================================================== */
+[hidden]{ display:none !important; }
 
 :root{
   --ink:        #242b1e;
