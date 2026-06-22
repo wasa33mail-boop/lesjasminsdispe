@@ -19,14 +19,17 @@
     Les Jasmins d'Ispe
   </a>
   <nav class="main-nav" id="mainNav">
-    <a href="#lieu">Le lieu</a>
-    <a href="#maison">La maison</a>
-    <a href="#chambres">Chambres</a>
-    <a href="#dehors">Extérieurs</a>
-    <a href="#equipements">Équipements</a>
-    <a href="gallery.html">Galerie</a>
-    <a href="#reserver" class="btn btn-ghost">Réserver</a>
+    <a href="#lieu" data-lang="fr">Le lieu</a><a href="#lieu" data-lang="en" hidden>The place</a>
+    <a href="#maison" data-lang="fr">La maison</a><a href="#maison" data-lang="en" hidden>The house</a>
+    <a href="#chambres" data-lang="fr">Chambres</a><a href="#chambres" data-lang="en" hidden>Bedrooms</a>
+    <a href="#dehors" data-lang="fr">Extérieurs</a><a href="#dehors" data-lang="en" hidden>Outdoors</a>
+    <a href="#equipements" data-lang="fr">Équipements</a><a href="#equipements" data-lang="en" hidden>Amenities</a>
+    <a href="gallery.html" data-lang="fr">Galerie</a><a href="gallery.html" data-lang="en" hidden>Gallery</a>
+    <a href="#reserver" class="btn btn-ghost" data-lang="fr">Réserver</a><a href="#reserver" class="btn btn-ghost" data-lang="en" hidden>Book</a>
   </nav>
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button" data-set-lang="fr" class="active">FR</button><button type="button" data-set-lang="en">EN</button>
+  </div>
   <button class="nav-toggle" id="navToggle" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -39,37 +42,60 @@
     <div class="hero-text">
       <p class="eyebrow">Biscarrosse · Lac d'Ispe</p>
       <h1><small>Les Jasmins</small>d'Ispe</h1>
-      <p class="sub">Entre lac, forêt et océan</p>
+      <p class="sub" data-lang="fr">Entre lac, forêt et océan</p>
+      <p class="sub" data-lang="en" hidden>Between lake, forest and ocean</p>
     </div>
     <div class="hero-facts">
       <div class="hero-fact">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-        <span><strong>Plage du lac</strong><span>À pied</span></span>
+        <span>
+          <strong data-lang="fr">Plage du lac</strong><strong data-lang="en" hidden>Lake beach</strong>
+          <span data-lang="fr">À pied</span><span data-lang="en" hidden>On foot</span>
+        </span>
       </div>
       <div class="hero-fact">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M2 16c1.5 1.4 3 1.4 4.5 0s3-1.4 4.5 0 3 1.4 4.5 0 3-1.4 4.5 0M2 11c1.5 1.4 3 1.4 4.5 0s3-1.4 4.5 0 3 1.4 4.5 0 3-1.4 4.5 0"/></svg>
-        <span><strong>Océan</strong><span>10 min</span></span>
+        <span>
+          <strong data-lang="fr">Océan</strong><strong data-lang="en" hidden>Ocean</strong>
+          <span>10 min</span>
+        </span>
       </div>
       <div class="hero-fact">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M6 21V4l11 5-6 3v9"/></svg>
-        <span><strong>Golf</strong><span>À proximité</span></span>
+        <span>
+          <strong>Golf</strong>
+          <span data-lang="fr">À proximité</span><span data-lang="en" hidden>Nearby</span>
+        </span>
       </div>
       <div class="hero-fact">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M9 17h4l3-8h2M9 17l3-6h4"/></svg>
-        <span><strong>Pistes cyclables</strong><span>Accès direct</span></span>
+        <span>
+          <strong data-lang="fr">Pistes cyclables</strong><strong data-lang="en" hidden>Cycling paths</strong>
+          <span data-lang="fr">Accès direct</span><span data-lang="en" hidden>Direct access</span>
+        </span>
       </div>
     </div>
   </div>
-  <div class="scroll-cue"><span>Découvrir</span><span class="line"></span></div>
+  <div class="scroll-cue">
+    <span data-lang="fr">Découvrir</span><span data-lang="en" hidden>Explore</span>
+    <span class="line"></span>
+  </div>
 </section>
 
 <!-- ================= INTRO / LE LAC ================= -->
 <section class="intro" id="lieu">
   <div class="container reveal">
-    <p class="eyebrow">Le lac, au rythme d'Ispe</p>
-    <h2>Ici, les journées commencent<br><em>au rythme du lac.</em></h2>
-    <p>Une promenade sous les pins conduit naturellement aux plages de sable fin et aux eaux paisibles qui font tout le charme d'Ispe.</p>
-    <p>À l'écart de l'agitation estivale, Ispe est un lieu privilégié où le lac, la forêt et les dunes se rencontrent — une maison de famille où chacun se sent bien, dans un cadre naturel préservé et apaisant.</p>
+    <p class="eyebrow" data-lang="fr">Le lac, au rythme d'Ispe</p>
+    <p class="eyebrow" data-lang="en" hidden>The lake, at Ispe's pace</p>
+
+    <h2 data-lang="fr">Ici, les journées commencent<br><em>au rythme du lac.</em></h2>
+    <h2 data-lang="en" hidden>Here, days begin<br><em>at the lake's pace.</em></h2>
+
+    <p data-lang="fr">Une promenade sous les pins conduit naturellement aux plages de sable fin et aux eaux paisibles qui font tout le charme d'Ispe.</p>
+    <p data-lang="en" hidden>A walk beneath the pines leads naturally to fine sandy beaches and calm waters — the very charm of Ispe.</p>
+
+    <p data-lang="fr">À l'écart de l'agitation estivale, Ispe est un lieu privilégié où le lac, la forêt et les dunes se rencontrent — une maison de famille où chacun se sent bien, dans un cadre naturel préservé et apaisant.</p>
+    <p data-lang="en" hidden>Away from the summer bustle, Ispe is a special place where the lake, the forest and the dunes meet — a family home where everyone feels at ease, in a preserved, soothing natural setting.</p>
   </div>
   <div class="intro-strip">
     <img src="images/jardin-deck.jpg" alt="Terrasse en bois et jardin de dunes planté de lavande et graminées">
@@ -83,16 +109,22 @@
   <div class="container">
     <div class="grid">
       <div class="reveal">
-        <p class="eyebrow">L'esprit d'Ispe</p>
-        <h2 class="section-head" style="margin-bottom:0">Les journées sont rythmées<br>par les plaisirs simples.</h2>
-        <p class="lede" style="margin-top:1.1em">Baignades, balades à vélo sous les pins, parties de golf et longues soirées en terrasse : les Jasmins d'Ispe ont été pensés comme une maison de famille où chacun se sent bien.</p>
+        <p class="eyebrow" data-lang="fr">L'esprit d'Ispe</p>
+        <p class="eyebrow" data-lang="en" hidden>The spirit of Ispe</p>
+
+        <h2 class="section-head" style="margin-bottom:0" data-lang="fr">Les journées sont rythmées<br>par les plaisirs simples.</h2>
+        <h2 class="section-head" style="margin-bottom:0" data-lang="en" hidden>Days are shaped<br>by simple pleasures.</h2>
+
+        <p class="lede" style="margin-top:1.1em" data-lang="fr">Baignades, balades à vélo sous les pins, parties de golf et longues soirées en terrasse : les Jasmins d'Ispe ont été pensés comme une maison de famille où chacun se sent bien.</p>
+        <p class="lede" style="margin-top:1.1em" data-lang="en" hidden>Swims, bike rides beneath the pines, rounds of golf and long evenings on the terrace: Les Jasmins d'Ispe was designed as a family home where everyone feels welcome.</p>
+
         <ul class="esprit-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/></svg>Plages du lac accessibles à pied</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M12 2 5 9v13h14V9z"/></svg>Forêt landaise en accès direct</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M9 17h4l3-8h2M9 17l3-6h4"/></svg>Pistes cyclables sécurisées</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M6 21V4l11 5-6 3v9"/></svg>Golf de Biscarrosse à proximité</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M2 16c1.5 1.4 3 1.4 4.5 0s3-1.4 4.5 0 3 1.4 4.5 0 3-1.4 4.5 0"/></svg>Océan Atlantique à 10 min</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M4 21h16M6 21V10l6-6 6 6v11"/></svg>Commerces et restaurants à 5 min</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/></svg><span data-lang="fr">Plages du lac accessibles à pied</span><span data-lang="en" hidden>Lake beaches within walking distance</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M12 2 5 9v13h14V9z"/></svg><span data-lang="fr">Forêt landaise en accès direct</span><span data-lang="en" hidden>Direct access to the Landes forest</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M9 17h4l3-8h2M9 17l3-6h4"/></svg><span data-lang="fr">Pistes cyclables sécurisées</span><span data-lang="en" hidden>Safe cycling paths</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M6 21V4l11 5-6 3v9"/></svg><span data-lang="fr">Golf de Biscarrosse à proximité</span><span data-lang="en" hidden>Biscarrosse golf course nearby</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M2 16c1.5 1.4 3 1.4 4.5 0s3-1.4 4.5 0 3 1.4 4.5 0 3-1.4 4.5 0"/></svg><span data-lang="fr">Océan Atlantique à 10 min</span><span data-lang="en" hidden>Atlantic Ocean 10 minutes away</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M4 21h16M6 21V10l6-6 6 6v11"/></svg><span data-lang="fr">Commerces et restaurants à 5 min</span><span data-lang="en" hidden>Shops and restaurants 5 minutes away</span></li>
         </ul>
       </div>
       <div class="esprit-photos reveal">
@@ -116,14 +148,20 @@
         </div>
       </div>
       <div class="split-text reveal">
-        <p class="eyebrow">Une maison pensée pour les vacances</p>
-        <h2 class="section-head" style="margin-bottom:0">La cuisine, cœur<br>de la maison.</h2>
-        <p class="lede" style="margin-top:1.1em">Les espaces de vie s'organisent autour d'une grande pièce ouverte, conviviale et lumineuse, conçue pour accueillir familles et amis. Cuisine équipée, coin repas, salon chaleureux : tout est réuni pour partager de beaux moments.</p>
+        <p class="eyebrow" data-lang="fr">Une maison pensée pour les vacances</p>
+        <p class="eyebrow" data-lang="en" hidden>A house designed for holidays</p>
+
+        <h2 class="section-head" style="margin-bottom:0" data-lang="fr">La cuisine, cœur<br>de la maison.</h2>
+        <h2 class="section-head" style="margin-bottom:0" data-lang="en" hidden>The kitchen, heart<br>of the house.</h2>
+
+        <p class="lede" style="margin-top:1.1em" data-lang="fr">Les espaces de vie s'organisent autour d'une grande pièce ouverte, conviviale et lumineuse, conçue pour accueillir familles et amis. Cuisine équipée, coin repas, salon chaleureux : tout est réuni pour partager de beaux moments.</p>
+        <p class="lede" style="margin-top:1.1em" data-lang="en" hidden>The living spaces are arranged around one large open, bright and convivial room, designed to welcome family and friends. A fully equipped kitchen, dining area and cosy lounge: everything is here to share great moments.</p>
+
         <div class="tag-list">
-          <span>Cuisine équipée</span>
-          <span>Lave-vaisselle</span>
-          <span>Wi-Fi haut débit</span>
-          <span>Linge fourni</span>
+          <span data-lang="fr">Cuisine équipée</span><span data-lang="en" hidden>Fully equipped kitchen</span>
+          <span data-lang="fr">Lave-vaisselle</span><span data-lang="en" hidden>Dishwasher</span>
+          <span data-lang="fr">Wi-Fi haut débit</span><span data-lang="en" hidden>High-speed Wi-Fi</span>
+          <span data-lang="fr">Linge fourni</span><span data-lang="en" hidden>Linens provided</span>
         </div>
       </div>
     </div>
@@ -134,33 +172,38 @@
 <section class="chambres" id="chambres">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow">Des chambres pour se retrouver</p>
-      <h2>Trois chambres confortables,<br>jusqu'à 8 voyageurs.</h2>
+      <p class="eyebrow" data-lang="fr">Des chambres pour se retrouver</p>
+      <p class="eyebrow" data-lang="en" hidden>Bedrooms to gather in</p>
+      <h2 data-lang="fr">Trois chambres confortables,<br>jusqu'à 8 voyageurs.</h2>
+      <h2 data-lang="en" hidden>Three comfortable bedrooms,<br>for up to 8 guests.</h2>
     </div>
     <div class="room-grid">
       <article class="room-card reveal">
         <div class="room-frame">
           <figure><img src="images/chambre-parentale.jpg" alt="Chambre parentale avec parure de lit verte à motif floral"></figure>
         </div>
-        <p class="room-num">— Chambre 01</p>
-        <h3>Chambre parentale</h3>
-        <p>Lit double, rangements intégrés et accès direct à la terrasse.</p>
+        <p class="room-num" data-lang="fr">— Chambre 01</p><p class="room-num" data-lang="en" hidden>— Room 01</p>
+        <h3 data-lang="fr">Chambre parentale</h3><h3 data-lang="en" hidden>Main bedroom</h3>
+        <p data-lang="fr">Lit double, rangements intégrés et accès direct à la terrasse.</p>
+        <p data-lang="en" hidden>Double bed, built-in storage and direct access to the terrace.</p>
       </article>
       <article class="room-card reveal">
         <div class="room-frame">
           <figure><img src="images/chambre-double.jpg" alt="Chambre double aux murs verts avec deux liseuses de chevet"></figure>
         </div>
-        <p class="room-num">— Chambre 02</p>
-        <h3>Chambre double</h3>
-        <p>Lit double et atmosphère douce, tons sauge et bois clair.</p>
+        <p class="room-num" data-lang="fr">— Chambre 02</p><p class="room-num" data-lang="en" hidden>— Room 02</p>
+        <h3 data-lang="fr">Chambre double</h3><h3 data-lang="en" hidden>Double room</h3>
+        <p data-lang="fr">Lit double et atmosphère douce, tons sauge et bois clair.</p>
+        <p data-lang="en" hidden>Double bed in a soft atmosphere of sage tones and light wood.</p>
       </article>
       <article class="room-card reveal">
         <div class="room-frame">
           <figure><img src="images/chambre-tribu.jpg" alt="Chambre tribu avec lits superposés en bois et planches de surf rangées au-dessus"></figure>
         </div>
-        <p class="room-num">— Chambre 03</p>
-        <h3>Chambre tribu</h3>
-        <p>Idéale pour les enfants : 2 lits superposés et 2 couchages simples.</p>
+        <p class="room-num" data-lang="fr">— Chambre 03</p><p class="room-num" data-lang="en" hidden>— Room 03</p>
+        <h3 data-lang="fr">Chambre tribu</h3><h3 data-lang="en" hidden>Bunk room</h3>
+        <p data-lang="fr">Idéale pour les enfants : 2 lits superposés et 2 couchages simples.</p>
+        <p data-lang="en" hidden>Perfect for children: 2 bunk beds and 2 single sleeping spaces.</p>
       </article>
     </div>
   </div>
@@ -170,15 +213,21 @@
 <section class="dehors" id="dehors">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow">Vivre dehors</p>
-      <h2>La vie se prolonge<br>naturellement à l'extérieur.</h2>
-      <p>Cuisine d'été, repas sous la pergola, baignades dans la piscine et longues soirées d'été composent le rythme des vacances.</p>
-      <p style="margin-top:1.4em"><a href="gallery.html" class="btn btn-line">Voir toute la galerie</a></p>
+      <p class="eyebrow" data-lang="fr">Vivre dehors</p>
+      <p class="eyebrow" data-lang="en" hidden>Outdoor living</p>
+      <h2 data-lang="fr">La vie se prolonge<br>naturellement à l'extérieur.</h2>
+      <h2 data-lang="en" hidden>Life naturally carries on<br>outdoors.</h2>
+      <p data-lang="fr">Cuisine d'été, repas sous la pergola, baignades dans la piscine et longues soirées d'été composent le rythme des vacances.</p>
+      <p data-lang="en" hidden>An outdoor kitchen, meals under the pergola, swims in the pool and long summer evenings set the pace of the holidays.</p>
+      <p style="margin-top:1.4em">
+        <a href="gallery.html" class="btn btn-line" data-lang="fr">Voir toute la galerie</a>
+        <a href="gallery.html" class="btn btn-line" data-lang="en" hidden>View the full gallery</a>
+      </p>
     </div>
     <div class="dehors-gallery reveal">
       <div class="big">
         <img src="images/jardin-deck.jpg" alt="Terrasse en bois et jardin planté de lavande et graminées, vue principale">
-        <span class="tag">Le jardin de sable</span>
+        <span class="tag" data-lang="fr">Le jardin de sable</span><span class="tag" data-lang="en" hidden>The sand garden</span>
       </div>
       <div><img src="images/bar-exterieur.jpg" alt="Bar et pergola extérieurs"></div>
       <div><img src="images/hero-exterieur.jpg" alt="Maison en bois et piscine vues depuis le jardin"></div>
@@ -190,39 +239,47 @@
 <section class="experiences">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow">Des expériences à vivre</p>
-      <h2>Un terrain de jeu naturel<br>et apaisant.</h2>
+      <p class="eyebrow" data-lang="fr">Des expériences à vivre</p>
+      <p class="eyebrow" data-lang="en" hidden>Experiences to enjoy</p>
+      <h2 data-lang="fr">Un terrain de jeu naturel<br>et apaisant.</h2>
+      <h2 data-lang="en" hidden>A natural and<br>soothing playground.</h2>
     </div>
     <div class="exp-grid reveal">
       <div class="exp-card">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.3"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/></svg>
-        <h4>Lac</h4>
-        <p>Paddle, canoé, baignade, pêche. Un terrain de jeu naturel et apaisant.</p>
+        <h4 data-lang="fr">Lac</h4><h4 data-lang="en" hidden>Lake</h4>
+        <p data-lang="fr">Paddle, canoé, baignade, pêche. Un terrain de jeu naturel et apaisant.</p>
+        <p data-lang="en" hidden>Paddleboarding, canoeing, swimming, fishing. A natural and soothing playground.</p>
       </div>
       <div class="exp-card">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.3"><path d="M2 16c1.5 1.4 3 1.4 4.5 0s3-1.4 4.5 0 3 1.4 4.5 0 3-1.4 4.5 0M2 11c1.5 1.4 3 1.4 4.5 0s3-1.4 4.5 0 3 1.4 4.5 0 3-1.4 4.5 0"/></svg>
-        <h4>Océan</h4>
-        <p>Surf, longues plages de sable fin et couchers de soleil inoubliables.</p>
+        <h4 data-lang="fr">Océan</h4><h4 data-lang="en" hidden>Ocean</h4>
+        <p data-lang="fr">Surf, longues plages de sable fin et couchers de soleil inoubliables.</p>
+        <p data-lang="en" hidden>Surfing, long sandy beaches and unforgettable sunsets.</p>
       </div>
       <div class="exp-card">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.3"><path d="M6 21V4l11 5-6 3v9"/></svg>
         <h4>Golf</h4>
-        <p>Le golf de Biscarrosse à quelques minutes.</p>
+        <p data-lang="fr">Le golf de Biscarrosse à quelques minutes.</p>
+        <p data-lang="en" hidden>Biscarrosse golf course just minutes away.</p>
       </div>
       <div class="exp-card">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.3"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M9 17h4l3-8h2M9 17l3-6h4"/></svg>
-        <h4>Vélo</h4>
-        <p>Plus de 60 km de pistes cyclables pour explorer la région.</p>
+        <h4 data-lang="fr">Vélo</h4><h4 data-lang="en" hidden>Cycling</h4>
+        <p data-lang="fr">Plus de 60 km de pistes cyclables pour explorer la région.</p>
+        <p data-lang="en" hidden>Over 60 km of cycling paths to explore the area.</p>
       </div>
       <div class="exp-card">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.3"><path d="M12 2c4 3 6 6 6 10a6 6 0 1 1-12 0c0-4 2-7 6-10z"/></svg>
-        <h4>Nature</h4>
-        <p>Forêt landaise, dune, faune unique : vivez au cœur de la nature.</p>
+        <h4 data-lang="fr">Nature</h4><h4 data-lang="en" hidden>Nature</h4>
+        <p data-lang="fr">Forêt landaise, dune, faune unique : vivez au cœur de la nature.</p>
+        <p data-lang="en" hidden>Landes forest, dunes, unique wildlife: live at the heart of nature.</p>
       </div>
       <div class="exp-card">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="m15 9-2 6-6 2 2-6 6-2z"/></svg>
-        <h4>Découvertes</h4>
-        <p>Dune du Pilat, Arcachon, marchés locaux, huîtres du Bassin.</p>
+        <h4 data-lang="fr">Découvertes</h4><h4 data-lang="en" hidden>Discoveries</h4>
+        <p data-lang="fr">Dune du Pilat, Arcachon, marchés locaux, huîtres du Bassin.</p>
+        <p data-lang="en" hidden>Dune du Pilat, Arcachon, local markets, oysters from the Bassin.</p>
       </div>
     </div>
   </div>
@@ -233,17 +290,19 @@
   <div class="container">
     <div class="grid">
       <div class="reveal">
-        <p class="eyebrow">Équipements &amp; services</p>
-        <h2 class="section-head" style="margin-bottom:0">Tout est prévu,<br>jusqu'au moindre détail.</h2>
+        <p class="eyebrow" data-lang="fr">Équipements &amp; services</p>
+        <p class="eyebrow" data-lang="en" hidden>Amenities &amp; services</p>
+        <h2 class="section-head" style="margin-bottom:0" data-lang="fr">Tout est prévu,<br>jusqu'au moindre détail.</h2>
+        <h2 class="section-head" style="margin-bottom:0" data-lang="en" hidden>Everything is provided,<br>down to the smallest detail.</h2>
         <ul class="check-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Piscine privée sécurisée</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Cuisine d'été avec plancha</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Terrasse et pergola</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Climatisation</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Wi-Fi haut débit</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Équipements bébé</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Linge de lit et de cuisine</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Parking privé</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg><span data-lang="fr">Piscine privée sécurisée</span><span data-lang="en" hidden>Secure private pool</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg><span data-lang="fr">Cuisine d'été avec plancha</span><span data-lang="en" hidden>Outdoor kitchen with plancha grill</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg><span data-lang="fr">Terrasse et pergola</span><span data-lang="en" hidden>Terrace and pergola</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg><span data-lang="fr">Climatisation</span><span data-lang="en" hidden>Air conditioning</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg><span data-lang="fr">Wi-Fi haut débit</span><span data-lang="en" hidden>High-speed Wi-Fi</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg><span data-lang="fr">Équipements bébé</span><span data-lang="en" hidden>Baby equipment</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg><span data-lang="fr">Linge de lit et de cuisine</span><span data-lang="en" hidden>Bed and kitchen linens</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg><span data-lang="fr">Parking privé</span><span data-lang="en" hidden>Private parking</span></li>
         </ul>
       </div>
       <div class="equip-media reveal">
@@ -257,42 +316,47 @@
 <section class="reserver" id="reserver">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow">Réserver votre séjour</p>
-      <h2>Parlons de vos<br>prochaines vacances.</h2>
+      <p class="eyebrow" data-lang="fr">Réserver votre séjour</p>
+      <p class="eyebrow" data-lang="en" hidden>Book your stay</p>
+      <h2 data-lang="fr">Parlons de vos<br>prochaines vacances.</h2>
+      <h2 data-lang="en" hidden>Let's talk about your<br>next holiday.</h2>
     </div>
     <div class="grid" style="margin-top:48px">
       <form class="reveal" id="contactForm" novalidate>
         <div class="form-row">
           <div class="form-field">
-            <label for="name">Nom</label>
+            <label for="name" data-lang="fr">Nom</label><label for="name" data-lang="en" hidden>Name</label>
             <input type="text" id="name" name="name" required>
           </div>
           <div class="form-field">
-            <label for="email">E-mail</label>
+            <label for="email" data-lang="fr">E-mail</label><label for="email" data-lang="en" hidden>Email</label>
             <input type="email" id="email" name="email" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-field">
-            <label for="arrival">Arrivée</label>
+            <label for="arrival" data-lang="fr">Arrivée</label><label for="arrival" data-lang="en" hidden>Arrival</label>
             <input type="date" id="arrival" name="arrival">
           </div>
           <div class="form-field">
-            <label for="departure">Départ</label>
+            <label for="departure" data-lang="fr">Départ</label><label for="departure" data-lang="en" hidden>Departure</label>
             <input type="date" id="departure" name="departure">
           </div>
         </div>
         <div class="form-field">
-          <label for="guests">Nombre de voyageurs</label>
+          <label for="guests" data-lang="fr">Nombre de voyageurs</label><label for="guests" data-lang="en" hidden>Number of guests</label>
           <input type="number" id="guests" name="guests" min="1" max="8">
         </div>
         <div class="form-field">
-          <label for="message">Message</label>
+          <label for="message" data-lang="fr">Message</label><label for="message" data-lang="en" hidden>Message</label>
           <textarea id="message" name="message" rows="4" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Envoyer la demande</button>
-        <p class="form-note">En envoyant ce formulaire, votre messagerie s'ouvre avec votre demande pré-remplie à destination de contact@lesjasminsdispe.fr.</p>
-        <p class="form-success" id="formSuccess">Merci ! Votre messagerie va s'ouvrir avec votre demande pré-remplie — il ne vous reste qu'à l'envoyer.</p>
+        <button type="submit" class="btn btn-primary" data-lang="fr">Envoyer la demande</button>
+        <button type="submit" class="btn btn-primary" data-lang="en" hidden>Send request</button>
+        <p class="form-note" data-lang="fr">En envoyant ce formulaire, votre messagerie s'ouvre avec votre demande pré-remplie à destination de contact@lesjasminsdispe.fr.</p>
+        <p class="form-note" data-lang="en" hidden>Submitting this form opens your email app with your request pre-filled, addressed to contact@lesjasminsdispe.fr.</p>
+        <p class="form-success" id="formSuccess" data-lang="fr">Merci ! Votre messagerie va s'ouvrir avec votre demande pré-remplie — il ne vous reste qu'à l'envoyer.</p>
+        <p class="form-success" id="formSuccessEn" data-lang="en" hidden>Thank you! Your email app will open with your request pre-filled — just hit send.</p>
       </form>
 
       <div class="reveal">
@@ -304,7 +368,7 @@
           </div>
           <div class="info-line">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.8 2.1z"/></svg>
-            <span>06 XX XX XX XX</span>
+            <span>06 28 25 02 96</span>
           </div>
           <div class="info-line">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></svg>
@@ -316,8 +380,8 @@
               title="Carte de localisation Les Jasmins d'Ispe"></iframe>
           </div>
           <div class="platform-links">
-            <a href="#" target="_blank" rel="noopener">Voir sur Airbnb</a>
-            <a href="#" target="_blank" rel="noopener">Voir sur Abritel</a>
+            <a href="#" target="_blank" rel="noopener" data-lang="fr">Voir sur Airbnb</a><a href="#" target="_blank" rel="noopener" data-lang="en" hidden>View on Airbnb</a>
+            <a href="#" target="_blank" rel="noopener" data-lang="fr">Voir sur Abritel</a><a href="#" target="_blank" rel="noopener" data-lang="en" hidden>View on Abritel</a>
           </div>
         </div>
       </div>
@@ -334,17 +398,18 @@
         Les Jasmins d'Ispe
       </div>
       <nav class="footer-nav">
-        <a href="#lieu">Le lieu</a>
-        <a href="#maison">La maison</a>
-        <a href="#chambres">Chambres</a>
-        <a href="#dehors">Extérieurs</a>
-        <a href="#equipements">Équipements</a>
-        <a href="gallery.html">Galerie</a>
-        <a href="#reserver">Réserver</a>
+        <a href="#lieu" data-lang="fr">Le lieu</a><a href="#lieu" data-lang="en" hidden>The place</a>
+        <a href="#maison" data-lang="fr">La maison</a><a href="#maison" data-lang="en" hidden>The house</a>
+        <a href="#chambres" data-lang="fr">Chambres</a><a href="#chambres" data-lang="en" hidden>Bedrooms</a>
+        <a href="#dehors" data-lang="fr">Extérieurs</a><a href="#dehors" data-lang="en" hidden>Outdoors</a>
+        <a href="#equipements" data-lang="fr">Équipements</a><a href="#equipements" data-lang="en" hidden>Amenities</a>
+        <a href="gallery.html" data-lang="fr">Galerie</a><a href="gallery.html" data-lang="en" hidden>Gallery</a>
+        <a href="#reserver" data-lang="fr">Réserver</a><a href="#reserver" data-lang="en" hidden>Book</a>
       </nav>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year"></span> Les Jasmins d'Ispe — Une maison de vacances à Biscarrosse Lac.</span>
+      <span data-lang="fr">© <span class="cur-year"></span> Les Jasmins d'Ispe — Une maison de vacances à Biscarrosse Lac.</span>
+      <span data-lang="en" hidden>© <span class="cur-year"></span> Les Jasmins d'Ispe — A holiday home at Biscarrosse Lake.</span>
       <span>Biscarrosse, Nouvelle-Aquitaine</span>
     </div>
   </div>

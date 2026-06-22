@@ -38,6 +38,7 @@
       });
     }, { threshold: 0.15 });
     revealEls.forEach(function(el){ io.observe(el); });
+    // safety net: if something is never intersected (edge cases), reveal anyway
     setTimeout(function(){
       revealEls.forEach(function(el){ el.classList.add('is-visible'); });
     }, 4000);
@@ -46,39 +47,12 @@
   }
 
   // ---- Footer year ----
-  document.querySelectorAll('.cur-year').forEach(function(el){
-    el.textContent = new Date().getFullYear();
-  });
-
-  // ---- Language switch (FR / EN) ----
-  // Default state in the HTML is already French-visible / English-hidden,
-  // so even if this never runs, the site is fully readable in French.
-  var LANG_KEY = 'jasmins-ispe-lang';
-  function setLang(lang){
-    document.querySelectorAll('[data-lang]').forEach(function(el){
-      el.hidden = el.getAttribute('data-lang') !== lang;
-    });
-    document.querySelectorAll('[data-set-lang]').forEach(function(btn){
-      btn.classList.toggle('active', btn.getAttribute('data-set-lang') === lang);
-    });
-    document.documentElement.lang = lang;
-    try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
-  }
-  document.querySelectorAll('[data-set-lang]').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      setLang(btn.getAttribute('data-set-lang'));
-    });
-  });
-  (function initLang(){
-    var saved = null;
-    try { saved = localStorage.getItem(LANG_KEY); } catch (e) {}
-    if (saved === 'en') setLang('en');
-  })();
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
 
   // ---- Contact form -> mailto fallback (no backend required) ----
   var form = document.getElementById('contactForm');
   var successMsg = document.getElementById('formSuccess');
-  var successMsgEn = document.getElementById('formSuccessEn');
   if (form){
     form.addEventListener('submit', function(e){
       e.preventDefault();
@@ -107,8 +81,7 @@
 
       window.location.href = mailto;
 
-      if (successMsg) successMsg.classList.add('show');
-      if (successMsgEn) successMsgEn.classList.add('show');
+      successMsg.classList.add('show');
       form.reset();
     });
   }
@@ -125,18 +98,13 @@
     var nextBtn = document.getElementById('lightboxNext');
     var currentIndex = 0;
 
-    function currentLang(){
-      var active = document.querySelector('[data-set-lang].active');
-      return active ? active.getAttribute('data-set-lang') : 'fr';
-    }
     function openLightbox(index){
       currentIndex = index;
       var item = items[index];
       var img = item.querySelector('img');
       lightboxImg.src = img.getAttribute('src');
       lightboxImg.alt = img.getAttribute('alt') || '';
-      var lang = currentLang();
-      lightboxCaption.textContent = item.getAttribute('data-caption-' + lang) || item.getAttribute('data-caption-fr') || '';
+      lightboxCaption.textContent = item.getAttribute('data-caption') || '';
       lightbox.classList.add('open');
       document.body.style.overflow = 'hidden';
     }

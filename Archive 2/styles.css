@@ -183,30 +183,6 @@ html.js-ready .reveal.is-visible{ opacity:1; transform:translateY(0); }
 }
 .site-header.scrolled .btn-ghost:hover{ background:var(--ink); color:var(--blanc); }
 
-.lang-switch{
-  display:flex; align-items:center; gap:.5em;
-  font-size:.74rem; font-weight:700; letter-spacing:.04em;
-  margin-left:1.4em;
-  position:relative; z-index:101;
-}
-.lang-switch button{
-  background:none; border:none; padding:2px 1px;
-  color:rgba(250,248,242,.6);
-  transition:color .25s ease;
-}
-.site-header.scrolled .lang-switch button{ color:var(--ink-soft); }
-.lang-switch button.active{
-  color:var(--blanc);
-  border-bottom:1px solid var(--sable);
-}
-.site-header.scrolled .lang-switch button.active{
-  color:var(--sauge-deep);
-  border-bottom-color:var(--sauge-deep);
-}
-@media (max-width: 880px){
-  .lang-switch{ margin-left:auto; margin-right:14px; }
-}
-
 .nav-toggle{
   display:none;
   width:30px; height:22px;
@@ -556,7 +532,7 @@ html.js-ready .reveal.is-visible{ opacity:1; transform:translateY(0); }
   font-size:.92rem; color:rgba(250,248,242,.88);
 }
 .check-list svg{ width:16px; height:16px; flex:none; margin-top:3px; stroke:var(--sable); }
-.equip-media img{ width:100%; height:480px; object-fit:cover; object-position:50% 30%; }
+.equip-media img{ width:100%; height:480px; object-fit:cover; object-position:60% 40%; }
 
 @media (max-width: 880px){
   .equip .grid{ grid-template-columns:1fr; }
