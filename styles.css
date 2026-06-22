@@ -155,15 +155,22 @@ html.js-ready .reveal.is-visible{ opacity:1; transform:translateY(0); }
   box-shadow:0 1px 0 var(--line);
 }
 .brand{
-  display:flex; align-items:center; gap:.6em;
+  display:flex; flex-direction:column; align-items:center; gap:.3em;
   font-family:var(--display);
-  font-size:1.05rem;
-  letter-spacing:.03em;
-  color:var(--blanc);
-  transition:color .35s ease;
+  font-size:.75rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--ink);
+  background:var(--blanc);
+  border:1px solid rgba(36,43,30,.15);
+  border-radius:6px;
+  padding:.5em .9em .55em;
+  transition:box-shadow .25s ease;
+  line-height:1.2;
 }
+.brand:hover{ box-shadow:0 2px 12px rgba(0,0,0,.10); }
 .site-header.scrolled .brand{ color:var(--ink); }
-.brand-mark{ width:30px; height:auto; flex:none; display:block; background:var(--sable-pale); border-radius:4px; padding:3px; }
+.brand-mark{ width:46px; height:auto; flex:none; display:block; }
 
 .main-nav{ display:flex; align-items:center; gap:1.5em; }
 .main-nav a{
