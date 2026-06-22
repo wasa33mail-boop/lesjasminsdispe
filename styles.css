@@ -3,7 +3,6 @@
    Palette : vert sauge / beige sable / blanc cassé
    Display : Fraunces — Texte : Work Sans
    ========================================================================== */
-[hidden]{ display:none !important; }
 
 :root{
   --ink:        #242b1e;
@@ -162,8 +161,7 @@ html.js-ready .reveal.is-visible{ opacity:1; transform:translateY(0); }
   transition:color .35s ease;
 }
 .site-header.scrolled .brand{ color:var(--ink); }
-.brand svg{ width:22px; height:22px; flex:none; }
-.brand .mark{ stroke:currentColor; }
+.brand-mark{ width:30px; height:auto; flex:none; display:block; }
 
 .main-nav{ display:flex; align-items:center; gap:2.1em; }
 .main-nav a{
@@ -625,7 +623,7 @@ html.js-ready .reveal.is-visible{ opacity:1; transform:translateY(0); }
   display:flex; justify-content:space-between; align-items:flex-start; gap:2em; flex-wrap:wrap;
 }
 .footer-brand{ display:flex; align-items:center; gap:.6em; color:var(--blanc); font-family:var(--display); font-size:1.1rem; }
-.footer-brand svg{ width:20px; height:20px; }
+.footer-brand .brand-mark{ width:26px; }
 .footer-nav{ display:flex; gap:1.6em; flex-wrap:wrap; }
 .footer-nav a{ font-size:.82rem; color:rgba(250,248,242,.75); }
 .footer-nav a:hover{ color:var(--sable); }
