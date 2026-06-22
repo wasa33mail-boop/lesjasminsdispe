@@ -25,6 +25,8 @@
   --radius: 2px;
 }
 
+[hidden]{ display:none !important; }
+
 /* ---------- Reset ---------- */
 *,*::before,*::after{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
