@@ -161,7 +161,7 @@ html.js-ready .reveal.is-visible{ opacity:1; transform:translateY(0); }
   transition:color .35s ease;
 }
 .site-header.scrolled .brand{ color:var(--ink); }
-.brand-mark{ width:30px; height:auto; flex:none; display:block; }
+.brand-mark{ width:30px; height:auto; flex:none; display:block; background:var(--sable-pale); border-radius:4px; padding:3px; }
 
 .main-nav{ display:flex; align-items:center; gap:1.5em; }
 .main-nav a{
