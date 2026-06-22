@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Météo & Marées — Les Jasmins d'Ispe · Biscarrosse</title>
 <meta name="description" content="Météo à Biscarrosse : prévisions 7 jours, vent, vagues et marées pour préparer vos sorties plage et nautiques.">
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -113,18 +118,20 @@
 <!-- ================= HEADER ================= -->
 <header class="site-header scrolled" id="siteHeader">
   <a href="index.html#top" class="brand" style="color:var(--ink)">
-    <svg viewBox="0 0 24 24" fill="none" class="mark"><path d="M12 3c1.2 2 1.2 4-0 6 1.8-1 3.8-0.6 5 1-2 1.2-4 1.2-6 0 1 1.8 0.6 3.8-1 5-1.2-2-1.2-4 0-6-1.8 1-3.8 0.6-5-1 2-1.2 4-1.2 6 0-1-1.8-0.6-3.8 1-5z" stroke-width="1.1"/></svg>
+    <img src="images/logo-mark.png" alt="" class="brand-mark">
     Les Jasmins d'Ispe
   </a>
   <nav class="main-nav" id="mainNav">
-    <a href="index.html#lieu">Le lieu</a>
-    <a href="index.html#maison">La maison</a>
-    <a href="index.html#chambres">Chambres</a>
-    <a href="gallery.html">Galerie</a>
-    <a href="conseils.html">Bons plans</a>
-    <a href="videos.html">Vidéos</a>
-    <a href="meteo.html" style="color:var(--sauge)">Météo</a>
-    <a href="index.html#reserver" class="btn btn-line">Réserver</a>
+    <a href="index.html#lieu" data-lang="fr">Le lieu</a><a href="index.html#lieu" data-lang="en" hidden>The place</a>
+    <a href="index.html#maison" data-lang="fr">La maison</a><a href="index.html#maison" data-lang="en" hidden>The house</a>
+    <a href="index.html#chambres" data-lang="fr">Chambres</a><a href="index.html#chambres" data-lang="en" hidden>Bedrooms</a>
+    <a href="index.html#dehors" data-lang="fr">Extérieurs</a><a href="index.html#dehors" data-lang="en" hidden>Outdoors</a>
+    <a href="index.html#equipements" data-lang="fr">Équipements</a><a href="index.html#equipements" data-lang="en" hidden>Amenities</a>
+    <a href="gallery.html" data-lang="fr">Galerie</a><a href="gallery.html" data-lang="en" hidden>Gallery</a>
+    <a href="conseils.html" data-lang="fr">Bons plans</a><a href="conseils.html" data-lang="en" hidden>Tips</a>
+    <a href="videos.html" data-lang="fr">Vidéos</a><a href="videos.html" data-lang="en" hidden>Videos</a>
+    <a href="meteo.html" style="color:var(--sauge)" data-lang="fr">Météo</a><a href="meteo.html" style="color:var(--sauge)" data-lang="en" hidden>Weather</a>
+    <a href="index.html#reserver" class="btn btn-line" data-lang="fr">Réserver</a><a href="index.html#reserver" class="btn btn-line" data-lang="en" hidden>Book</a>
   </nav>
   <div class="lang-switch" role="group" aria-label="Language">
     <button type="button" data-set-lang="fr" class="active">FR</button><button type="button" data-set-lang="en">EN</button>
@@ -280,21 +287,30 @@
 
 <!-- ================= FOOTER ================= -->
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <a href="index.html#top" class="brand footer-brand">
-      <svg viewBox="0 0 24 24" fill="none" class="mark"><path d="M12 3c1.2 2 1.2 4-0 6 1.8-1 3.8-0.6 5 1-2 1.2-4 1.2-6 0 1 1.8 0.6 3.8-1 5-1.2-2-1.2-4 0-6-1.8 1-3.8 0.6-5-1 2-1.2 4-1.2 6 0-1-1.8-0.6-3.8 1-5z" stroke-width="1.1"/></svg>
-      Les Jasmins d'Ispe
-    </a>
-    <nav class="footer-nav">
-      <a href="index.html#lieu">Le lieu</a>
-      <a href="index.html#maison">La maison</a>
-      <a href="gallery.html">Galerie</a>
-      <a href="conseils.html">Bons plans</a>
-      <a href="videos.html">Vidéos</a>
-      <a href="meteo.html">Météo</a>
-      <a href="index.html#reserver">Réserver</a>
-    </nav>
-    <p class="footer-copy">© <span class="cur-year"></span> Les Jasmins d'Ispe · Biscarrosse</p>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo-mark.png" alt="" class="brand-mark">
+        Les Jasmins d'Ispe
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html#lieu" data-lang="fr">Le lieu</a><a href="index.html#lieu" data-lang="en" hidden>The place</a>
+        <a href="index.html#maison" data-lang="fr">La maison</a><a href="index.html#maison" data-lang="en" hidden>The house</a>
+        <a href="index.html#chambres" data-lang="fr">Chambres</a><a href="index.html#chambres" data-lang="en" hidden>Bedrooms</a>
+        <a href="index.html#dehors" data-lang="fr">Extérieurs</a><a href="index.html#dehors" data-lang="en" hidden>Outdoors</a>
+        <a href="index.html#equipements" data-lang="fr">Équipements</a><a href="index.html#equipements" data-lang="en" hidden>Amenities</a>
+        <a href="gallery.html" data-lang="fr">Galerie</a><a href="gallery.html" data-lang="en" hidden>Gallery</a>
+        <a href="conseils.html" data-lang="fr">Bons plans</a><a href="conseils.html" data-lang="en" hidden>Tips</a>
+        <a href="videos.html" data-lang="fr">Vidéos</a><a href="videos.html" data-lang="en" hidden>Videos</a>
+        <a href="meteo.html" data-lang="fr">Météo</a><a href="meteo.html" data-lang="en" hidden>Weather</a>
+        <a href="index.html#reserver" data-lang="fr">Réserver</a><a href="index.html#reserver" data-lang="en" hidden>Book</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span data-lang="fr">© <span class="cur-year"></span> Les Jasmins d'Ispe — Une maison de vacances à Biscarrosse Lac.</span>
+      <span data-lang="en" hidden>© <span class="cur-year"></span> Les Jasmins d'Ispe — A holiday home at Biscarrosse Lake.</span>
+      <span>Biscarrosse, Nouvelle-Aquitaine</span>
+    </div>
   </div>
 </footer>
 
