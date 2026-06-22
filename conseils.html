@@ -10,14 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-/* ---- Page conseils ---- */
 .conseils-hero{
   padding: 170px 0 70px;
   background: var(--blanc);
   border-bottom: 1px solid var(--line);
-}
-.conseils-intro{
-  max-width: 680px;
 }
 .cat-nav{
   display: flex;
@@ -42,22 +38,18 @@
 }
 .cat-pill:hover{ background: var(--sable); border-color: var(--sauge); }
 
-/* ---- Category sections ---- */
 .cat-section{
   padding: 72px 0 56px;
   border-bottom: 1px solid var(--line);
 }
-.cat-section:last-child{ border-bottom: none; }
+.cat-section:last-of-type{ border-bottom: none; }
 .cat-header{
   display: flex;
   align-items: center;
   gap: .7em;
   margin-bottom: 2em;
 }
-.cat-icon{
-  font-size: 1.8rem;
-  line-height: 1;
-}
+.cat-icon{ font-size: 1.8rem; line-height: 1; }
 .cat-title{
   font-family: var(--display);
   font-size: clamp(1.5rem, 3vw, 2rem);
@@ -66,7 +58,6 @@
   color: var(--ink);
 }
 
-/* ---- Cards grid ---- */
 .cards{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -87,33 +78,25 @@
 }
 .card-photo{
   width: 100%;
-  height: 180px;
+  height: 190px;
   object-fit: cover;
   display: block;
-  background: var(--sable);
 }
-.card-photo-placeholder{
+.card-placeholder{
   width: 100%;
-  height: 180px;
+  height: 190px;
   background: linear-gradient(135deg, var(--sable) 0%, #d9d3c2 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.8rem;
+  font-size: 3.2rem;
 }
 .card-body{
   padding: 1.1em 1.2em 1.3em;
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: .5em;
-}
-.card-name{
-  font-family: var(--display);
-  font-size: 1.12rem;
-  font-weight: 600;
-  margin: 0;
-  color: var(--ink);
+  gap: .45em;
 }
 .card-tag{
   font-size: .72rem;
@@ -122,9 +105,16 @@
   text-transform: uppercase;
   color: var(--sauge);
 }
+.card-name{
+  font-family: var(--display);
+  font-size: 1.12rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--ink);
+}
 .card-desc{
   font-size: .88rem;
-  line-height: 1.6;
+  line-height: 1.65;
   color: #555;
   margin: 0;
   flex: 1;
@@ -136,15 +126,14 @@
   font-size: .82rem;
   font-weight: 600;
   color: var(--ink);
-  margin-top: .2em;
 }
-.stars{ color: #e5a82e; letter-spacing: .05em; }
+.stars{ color: #e5a82e; }
 .rating-count{ color: #888; font-weight: 400; }
 .card-links{
   display: flex;
   gap: .6em;
   flex-wrap: wrap;
-  margin-top: .6em;
+  margin-top: .4em;
 }
 .card-link{
   display: inline-flex;
@@ -160,27 +149,26 @@
   transition: background .15s, color .15s;
 }
 .card-link:hover{ background: var(--sauge); color: #fff; }
-.card-link svg{ width:12px; height:12px; stroke: currentColor; fill:none; flex-shrink:0; }
+.card-link svg{ width:12px; height:12px; stroke:currentColor; fill:none; flex-shrink:0; }
 
-/* ---- Highlight card (wide) ---- */
 .card-wide{
   grid-column: 1 / -1;
   flex-direction: row;
 }
-.card-wide .card-photo-placeholder,
+.card-wide .card-placeholder,
 .card-wide .card-photo{
-  width: 280px;
+  width: 260px;
   height: auto;
+  min-height: 200px;
   flex-shrink: 0;
 }
 @media(max-width:640px){
   .card-wide{ flex-direction: column; }
-  .card-wide .card-photo-placeholder,
-  .card-wide .card-photo{ width: 100%; height: 180px; }
+  .card-wide .card-placeholder,
+  .card-wide .card-photo{ width:100%; height:190px; min-height:unset; }
 }
 
-/* ---- Tip banner ---- */
-.tip-banner{
+.tip{
   background: #f0ede5;
   border-left: 3px solid var(--sauge);
   border-radius: 0 8px 8px 0;
@@ -190,22 +178,7 @@
   color: var(--ink);
   margin-bottom: 2em;
 }
-.tip-banner strong{ color: var(--sauge); }
-
-/* ---- Distance badge ---- */
-.dist-badge{
-  display: inline-flex;
-  align-items: center;
-  gap: .25em;
-  font-size: .72rem;
-  font-weight: 600;
-  color: #777;
-  background: #f0ede5;
-  border-radius: 4px;
-  padding: .15em .5em;
-  margin-left: .4em;
-  vertical-align: middle;
-}
+.tip strong{ color: var(--sauge); }
 </style>
 </head>
 <body>
@@ -235,22 +208,19 @@
 <!-- ================= HERO ================= -->
 <section class="conseils-hero">
   <div class="container">
-    <div class="conseils-intro">
-      <p class="eyebrow">Les Jasmins d'Ispe · Biscarrosse</p>
-      <h1 style="font-family:var(--display); font-size:clamp(2.2rem,5vw,3.4rem); margin-top:.4em; line-height:1.05;">
-        Nos coups de cœur
-      </h1>
-      <p class="lede" style="margin-top:1em">
-        Les adresses testées et approuvées autour de la maison — toutes à moins de 15&nbsp;km, idéales à vélo ou en voiture. Plages, restaurants, glaces, marchés et balades pour des vacances parfaites.
-      </p>
-    </div>
-    <!-- Navigation par catégorie -->
+    <p class="eyebrow">Les Jasmins d'Ispe · Biscarrosse</p>
+    <h1 style="font-family:var(--display); font-size:clamp(2.2rem,5vw,3.4rem); margin-top:.4em; line-height:1.05;">
+      Nos coups de cœur
+    </h1>
+    <p class="lede" style="margin-top:1em; max-width:620px;">
+      Les adresses testées et approuvées autour de la maison — plages, restaurants, glaces, marchés et balades pour des vacances parfaites dans les Landes.
+    </p>
     <nav class="cat-nav" aria-label="Catégories">
-      <a href="#plages" class="cat-pill">🏖️ Les plages</a>
-      <a href="#restaurants" class="cat-pill">🍽️ Tables & restaurants</a>
+      <a href="#plages" class="cat-pill">🏖️ Plages</a>
+      <a href="#restaurants" class="cat-pill">🍽️ Restaurants</a>
       <a href="#brunch" class="cat-pill">☕ Brunch & café</a>
-      <a href="#aperó" class="cat-pill">🌅 Apéro & coucher de soleil</a>
-      <a href="#glaces" class="cat-pill">🍦 Glaces & douceurs</a>
+      <a href="#apero" class="cat-pill">🌅 Apéro & coucher de soleil</a>
+      <a href="#glaces" class="cat-pill">🍦 Glaces</a>
       <a href="#activites" class="cat-pill">🚴 Activités & balades</a>
       <a href="#courses" class="cat-pill">🛒 Courses & marchés</a>
     </nav>
@@ -264,66 +234,66 @@
       <span class="cat-icon">🏖️</span>
       <h2 class="cat-title">Les plages</h2>
     </div>
-    <div class="tip-banner">
-      <strong>Bon à savoir :</strong> la plage du lac est accessible à pied depuis la maison. Pour l'océan, comptez 10&nbsp;min en voiture — pensez à y aller tôt en juillet-août, les parkings se remplissent vite.
+    <div class="tip">
+      <strong>Lever de soleil :</strong> la plage du lac est au bout de la rue. Pas besoin de GPS ni d'excuse — descendez en pyjama, vous nous remercierez.
     </div>
     <div class="cards">
 
-      <div class="card card-wide">
-        <div class="card-photo-placeholder">🌊</div>
+      <div class="card">
+        <div class="card-placeholder">🌊</div>
         <div class="card-body">
-          <span class="card-tag">Lac · À pied</span>
-          <h3 class="card-name">Plage du Lac d'Ispe</h3>
-          <p class="card-desc">Accessible à pied depuis la maison derrière le club de voile — accès rapide et facile tout le long du lac. Eau douce, calme, idéale pour les enfants. En voiture, le parking est payant mais on peut aussi passer par la piste cyclable.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★★</span>
-            <span>4,7</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
+          <span class="card-tag">Lac de Cazaux · À pied</span>
+          <h3 class="card-name">Plage d'Ispe</h3>
+          <p class="card-desc">La plage du quartier — accessible à pied en quelques minutes derrière le club de voile. Eau douce, calme, idéale pour les enfants. En voiture : parking payant ou accès via la piste cyclable.</p>
           <div class="card-links">
-            <a href="https://www.google.com/maps/search/?api=1&query=plage+lac+ispe+biscarrosse" target="_blank" rel="noopener" class="card-link">
+            <a href="https://www.google.com/maps/search/?api=1&query=plage+ispe+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-photo-placeholder">🌊</div>
+        <div class="card-placeholder">🌅</div>
         <div class="card-body">
-          <span class="card-tag">Océan · 10 min</span>
-          <h3 class="card-name">Plage du Vivier</h3>
-          <p class="card-desc">Grande plage océan, parking payant mais bien organisé. La valeur sûre côté Atlantique — rouleaux garantis, idéale pour le surf et les longues balades sur le sable. Une jolie balade nature relie le Vivier à Biscarrosse centre.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★☆</span>
-            <span>4,5</span>
-            <span class="rating-count">· Google Maps</span>
+          <span class="card-tag">Lac de Cazaux · À vélo</span>
+          <h3 class="card-name">Plage de Mayotte</h3>
+          <p class="card-desc">À vélo depuis la maison, le long du lac. Plage du lac de Cazaux avec bar (La Paillote) et école nautique H2O à deux pas. Le spot parfait pour une sortie vélo qui se termine les pieds dans l'eau.</p>
+          <div class="card-links">
+            <a href="https://www.google.com/maps/search/?api=1&query=plage+mayotte+biscarrosse" target="_blank" rel="noopener" class="card-link">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+              Google Maps
+            </a>
           </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-placeholder">🏄</div>
+        <div class="card-body">
+          <span class="card-tag">Océan · 10 min · Parking payant</span>
+          <h3 class="card-name">Plage du Vivier</h3>
+          <p class="card-desc">La grande plage océan de référence. Rouleaux garantis, idéale pour le surf. Une jolie balade nature longe le trait de côte jusqu'à Biscarrosse centre. Arriver tôt en juillet-août.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=plage+du+vivier+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-photo-placeholder">🏄</div>
+        <div class="card-placeholder">🌊</div>
         <div class="card-body">
-          <span class="card-tag">Océan · 10 min · Gratuit</span>
+          <span class="card-tag">Océan · 10 min · Parking gratuit</span>
           <h3 class="card-name">Plage Sud</h3>
-          <p class="card-desc">Alternative gratuite au Vivier — parking gratuit, plage plus étroite à marée haute. Parfait pour une sortie spontanée sans se soucier du parking. Moins de monde que le Vivier le matin.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★☆</span>
-            <span>4,3</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
+          <p class="card-desc">L'alternative gratuite au Vivier. Plus étroite à marée haute mais parking gratuit et moins fréquentée. Parfaite pour une sortie spontanée sans se soucier du stationnement.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=plage+sud+biscarrosse+plage" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
@@ -343,120 +313,120 @@
     <div class="cards">
 
       <div class="card">
-        <div class="card-photo-placeholder">🍕</div>
+        <div class="card-placeholder">🍕</div>
         <div class="card-body">
           <span class="card-tag">Pizzeria · Coup de cœur</span>
           <h3 class="card-name">Chez Julia</h3>
-          <p class="card-desc">Les meilleures pizzas du coin — sans discussion. Une adresse incontournable, à réserver en avance en juillet-août. Simple, généreux, toujours bon.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★★</span>
-            <span>4,6</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
+          <p class="card-desc">Les meilleures pizzas du coin — sans discussion. Simple, généreux, toujours bon. À réserver en avance en juillet-août.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=chez+julia+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-photo-placeholder">🍝</div>
+        <div class="card-placeholder">🍝</div>
         <div class="card-body">
           <span class="card-tag">Italien · À 20 m de Julia</span>
           <h3 class="card-name">Alma Mia</h3>
-          <p class="card-desc">Les meilleures pâtes de Biscarrosse — mention spéciale pour les pâtes à la pistache, à ne pas manquer. À 20 mètres de Chez Julia, dans la même rue. Un doublé gagnant.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★★</span>
-            <span>4,7</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
+          <p class="card-desc">Les meilleures pâtes de Biscarrosse, à 20 mètres de Chez Julia. Mention spéciale pour les pâtes à la pistache — à ne manquer sous aucun prétexte.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=alma+mia+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-photo-placeholder">🌊</div>
+      <div class="card card-wide">
+        <div class="card-placeholder">🌊</div>
         <div class="card-body">
-          <span class="card-tag">Bord du lac · Vue imprenable</span>
-          <h3 class="card-name">Restaurant du Latécoère</h3>
-          <p class="card-desc">Belle vue sur le lac sud de Biscarrosse, ambiance toujours appréciée. Associé à Chez Kiki (Café de la Plage). Une adresse à ne pas manquer pour dîner les pieds dans l'eau. Idéal après une journée à l'Aqualand.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★☆</span>
-            <span>4,2</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
+          <span class="card-tag">Lac de Biscarrosse-Parentis · Bord du lac</span>
+          <h3 class="card-name">Le Latécoère</h3>
+          <p class="card-desc">Belle vue sur le lac de Biscarrosse-Parentis, ambiance toujours appréciée. Associé au Café de la Plage à Biscarrosse Plage — les deux adresses partagent le même esprit. En été, belles soirées organisées, parfait après une journée à l'Aqualand suivie d'un apéro au bord de l'eau. Et si vous vous demandez pourquoi un restaurant du bord du lac s'appelle le Latécoère — la réponse est à la base d'hydravions.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=restaurant+Latécoère+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-photo-placeholder">🔥</div>
+        <div class="card-placeholder">🍹</div>
         <div class="card-body">
-          <span class="card-tag">BBQ · Convivial</span>
-          <h3 class="card-name">Le Maquis</h3>
-          <p class="card-desc">BBQ géant et pistes de pétanque sur place — l'ambiance estivale par excellence. Parfait pour une soirée détendue en famille ou entre amis. Réservation conseillée en haute saison.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★☆</span>
-            <span>4,1</span>
-            <span class="rating-count">· Google Maps</span>
+          <span class="card-tag">Bar-restaurant · Biscarrosse Plage</span>
+          <h3 class="card-name">Chez Kiki</h3>
+          <p class="card-desc">Bar-restaurant à Biscarrosse Plage, ambiance estivale et décontractée. Belle terrasse, clientèle fidèle. Le genre d'endroit où l'on revient chaque été.</p>
+          <div class="card-links">
+            <a href="https://www.google.com/maps/search/?api=1&query=chez+kiki+biscarrosse+plage" target="_blank" rel="noopener" class="card-link">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+              Google Maps
+            </a>
           </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-placeholder">🌊</div>
+        <div class="card-body">
+          <span class="card-tag">Restaurant · Biscarrosse Plage · Associé au Latécoère</span>
+          <h3 class="card-name">Le Café de la Plage</h3>
+          <p class="card-desc">Restaurant à Biscarrosse Plage, associé au Latécoère sur le lac. On préfère personnellement un verre au bord de l'eau plutôt qu'à l'Idylle, mais l'expérience y reste très sympathique.</p>
+          <div class="card-links">
+            <a href="https://www.google.com/maps/search/?api=1&query=café+de+la+plage+biscarrosse" target="_blank" rel="noopener" class="card-link">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+              Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-placeholder">🔥</div>
+        <div class="card-body">
+          <span class="card-tag">BBQ · Pétanque · Convivial</span>
+          <h3 class="card-name">Le Maquis</h3>
+          <p class="card-desc">BBQ géant et pistes de pétanque sur place — l'ambiance estivale landaise par excellence. Parfait pour une soirée détendue en famille ou entre amis.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=le+maquis+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-photo-placeholder">🍹</div>
+        <div class="card-placeholder">🍸</div>
         <div class="card-body">
-          <span class="card-tag">Bar · Cocktails · En face du Maquis</span>
+          <span class="card-tag">Cocktails · Pétanque · En face du Maquis</span>
           <h3 class="card-name">Chez Georgette</h3>
-          <p class="card-desc">En face du Maquis, avec pétanque aussi — mais les cocktails y sont plus sophistiqués (et plus onéreux). Pour les amateurs de mixologie qui veulent prolonger la soirée avec style.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★☆</span>
-            <span>4,2</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
+          <p class="card-desc">En face du Maquis, pétanque aussi — mais les cocktails y sont plus sophistiqués (et plus onéreux). Pour les amateurs de mixologie qui veulent prolonger la soirée avec style.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=chez+georgette+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-photo-placeholder">🥗</div>
+        <div class="card-placeholder">🥗</div>
         <div class="card-body">
-          <span class="card-tag">Poké · Smoothies · Frais</span>
+          <span class="card-tag">Poké · Smoothies · Léger</span>
           <h3 class="card-name">Nusa Dua</h3>
           <p class="card-desc">Smoothies très frais et bons poké bowls — une touche locale appréciable pour déjeuner léger après la plage. L'adresse idéale pour manger sain sans se prendre la tête.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★☆</span>
-            <span>4,3</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=nusa+dua+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
@@ -476,60 +446,30 @@
     <div class="cards">
 
       <div class="card card-wide">
-        <div class="card-photo-placeholder">🥐</div>
+        <div class="card-placeholder">🥐</div>
         <div class="card-body">
           <span class="card-tag">Brunch · Thé · Coup de cœur absolu</span>
           <h3 class="card-name">Fusion</h3>
-          <p class="card-desc">Tenu par un maître pâtissier formé dans des établissements très haut de gamme et une hôtesse hors pair, également professeure de yoga. Sandwichs et pancakes à tomber, jolis cakes et créations gourmandes. Le QG brunch & thé de Biscarrosse — une expérience à part entière.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★★</span>
-            <span>4,8</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
+          <p class="card-desc">Tenu par un maître pâtissier formé dans des établissements très haut de gamme et une hôtesse hors pair, également professeure de yoga. Sandwichs et pancakes à tomber, jolis cakes et créations gourmandes. Le QG brunch & thé de Biscarrosse — une expérience à part entière, pas juste un café.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=fusion+brunch+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-photo-placeholder">🥖</div>
+        <div class="card-placeholder">🥖</div>
         <div class="card-body">
-          <span class="card-tag">Boulangerie · Moins fréquentée</span>
+          <span class="card-tag">Boulangerie · Secret des habitués</span>
           <h3 class="card-name">Pain d'Aqui</h3>
-          <p class="card-desc">Topissime — et moins fréquentée que les autres boulangeries du coin. Le secret des habitués pour des croissants sans file d'attente. Idéale le matin avant la plage.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★★</span>
-            <span>4,6</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
+          <p class="card-desc">Topissime — et moins fréquentée que les autres boulangeries du coin. Le secret des habitués pour des croissants sans faire la queue. Idéale le matin avant la plage.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=pain+d'aqui+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-photo-placeholder">🌊</div>
-        <div class="card-body">
-          <span class="card-tag">Café · Bord du lac</span>
-          <h3 class="card-name">Chez Kiki — Café de la Plage</h3>
-          <p class="card-desc">Belle vue, ambiance détendue au bord du lac. En été, belles soirées organisées — parfait après l'Aqualand suivi d'un apéro. On y préfère personnellement un verre au bord de l'eau plutôt qu'à l'Idylle.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★☆</span>
-            <span>4,1</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
-          <div class="card-links">
-            <a href="https://www.google.com/maps/search/?api=1&query=cafe+de+la+plage+chez+kiki+biscarrosse" target="_blank" rel="noopener" class="card-link">
-              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
@@ -539,53 +479,55 @@
   </div>
 </section>
 
-<!-- ================= APÉRO & COUCHER DE SOLEIL ================= -->
-<section class="cat-section" id="aperó">
+<!-- ================= APÉRO ================= -->
+<section class="cat-section" id="apero">
   <div class="container">
     <div class="cat-header">
       <span class="cat-icon">🌅</span>
       <h2 class="cat-title">Apéro & coucher de soleil</h2>
     </div>
-    <div class="tip-banner">
-      <strong>Notre rituel :</strong> un verre au bord du lac au coucher du soleil, vers 21h en été. Le Top Dream ou La Siesta sont parfaits pour ça.
-    </div>
     <div class="cards">
 
       <div class="card">
-        <div class="card-photo-placeholder">🌅</div>
+        <div class="card-placeholder">🌴</div>
         <div class="card-body">
-          <span class="card-tag">Bar · Vue lac · Valeur sûre</span>
-          <h3 class="card-name">Le Top Dream</h3>
-          <p class="card-desc">La valeur sûre pour l'apéro au coucher du soleil sur le lac. Ambiance estivale, vue dégagée sur l'eau. Le genre d'endroit où l'on reste bien plus longtemps que prévu.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★☆</span>
-            <span>4,2</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
+          <span class="card-tag">Bar · Plage de Mayotte · À vélo</span>
+          <h3 class="card-name">La Paillote</h3>
+          <p class="card-desc">Bar sur la plage de Mayotte, accessible à vélo depuis la maison. L'adresse idéale pour un verre au coucher du soleil les pieds dans le sable du lac. Vue dégagée sur l'eau, ambiance vacances garantie.</p>
           <div class="card-links">
-            <a href="https://www.google.com/maps/search/?api=1&query=top+dream+biscarrosse" target="_blank" rel="noopener" class="card-link">
+            <a href="https://www.google.com/maps/search/?api=1&query=la+paillote+biscarrosse+mayotte" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-photo-placeholder">🍸</div>
+        <div class="card-placeholder">🌅</div>
         <div class="card-body">
-          <span class="card-tag">Bar · Alternative sympa</span>
-          <h3 class="card-name">La Siesta</h3>
-          <p class="card-desc">Une autre bonne option pour le coucher du soleil. Ambiance plus tranquille, parfait si le Top Dream est bondé. À tester aussi pour changer d'atmosphère en cours de séjour.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★☆</span>
-            <span>4,0</span>
-            <span class="rating-count">· Google Maps</span>
+          <span class="card-tag">Bar · Vue lac · Valeur sûre</span>
+          <h3 class="card-name">Dream Beach</h3>
+          <p class="card-desc">La valeur sûre pour l'apéro au coucher du soleil sur le lac. Ambiance estivale, vue dégagée sur l'eau. Le genre d'endroit où l'on reste bien plus longtemps que prévu.</p>
+          <div class="card-links">
+            <a href="https://www.google.com/maps/search/?api=1&query=dream+beach+biscarrosse" target="_blank" rel="noopener" class="card-link">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+              Google Maps
+            </a>
           </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-placeholder">🍸</div>
+        <div class="card-body">
+          <span class="card-tag">Bar · Alternative tranquille</span>
+          <h3 class="card-name">La Siesta</h3>
+          <p class="card-desc">Une autre bonne option pour le coucher du soleil. Ambiance plus tranquille — parfait si le Dream Beach est bondé. À tester aussi pour changer d'atmosphère en cours de séjour.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=la+siesta+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
@@ -605,20 +547,15 @@
     <div class="cards">
 
       <div class="card card-wide">
-        <div class="card-photo-placeholder">🍨</div>
+        <div class="card-placeholder">🍨</div>
         <div class="card-body">
           <span class="card-tag">Glacier · Incontournable</span>
           <h3 class="card-name">Henriette et Olga</h3>
-          <p class="card-desc">L'adresse glaces de Biscarrosse. Des parfums originaux, des produits de qualité et une file d'attente qui en dit long sur la réputation. Le passage obligé après la plage ou le marché. Prévoir d'attendre un peu en août — ça vaut le coup.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★★</span>
-            <span>4,7</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
+          <p class="card-desc">L'adresse glaces de Biscarrosse. Des parfums originaux, des produits de qualité et une file d'attente qui en dit long sur la réputation. Le passage obligé après la plage ou le marché. Prévoir d'attendre un peu en août — ça vaut largement le coup.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=henriette+et+olga+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
@@ -638,82 +575,96 @@
     <div class="cards">
 
       <div class="card">
-        <div class="card-photo-placeholder">🚴</div>
+        <div class="card-placeholder">🪁</div>
         <div class="card-body">
-          <span class="card-tag">Vélo · Piste cyclable</span>
-          <h3 class="card-name">Piste cyclable Biscarrosse → Sanguinet</h3>
-          <p class="card-desc">La piste cyclable longe le lac depuis la plage jusqu'à Sanguinet — une balade à faire absolument. Attention avec les enfants : la portion côté Maguide (plage du lac) est assez exigeante. Compter 1h30 aller-retour tranquillement.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★★</span>
-            <span>4,8</span>
-            <span class="rating-count">· Google Maps</span>
+          <span class="card-tag">Voile · Kitesurf · À vélo · Plage de Mayotte</span>
+          <h3 class="card-name">École de voile H2O</h3>
+          <p class="card-desc">Juste à côté de la Paillote sur la plage de Mayotte, accessible à vélo. Voile, kitesurf et activités nautiques sur le lac de Cazaux. Idéal pour les débutants comme les confirmés — cours à la journée ou à la demi-journée.</p>
+          <div class="card-links">
+            <a href="https://www.google.com/maps/search/?api=1&query=H2O+kitesurf+voile+biscarrosse" target="_blank" rel="noopener" class="card-link">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+              Google Maps
+            </a>
           </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-placeholder">🚴</div>
+        <div class="card-body">
+          <span class="card-tag">Vélo · Lac de Cazaux</span>
+          <h3 class="card-name">Piste cyclable → Sanguinet</h3>
+          <p class="card-desc">La piste cyclable longe le lac de Cazaux depuis la plage jusqu'à Sanguinet — une balade à faire absolument. Attention avec les enfants : la portion côté Maguide est assez exigeante. Compter 1h30 aller-retour tranquillement.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=piste+cyclable+biscarrosse+sanguinet" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-photo-placeholder">⛳</div>
+        <div class="card-placeholder">⛳</div>
         <div class="card-body">
-          <span class="card-tag">Golf · Équipement disponible</span>
+          <span class="card-tag">Golf · Matériel disponible à la maison</span>
           <h3 class="card-name">Golf de Biscarrosse</h3>
-          <p class="card-desc">Un sac avec demi-série de clubs et chariot est disponible à la maison — pas besoin d'apporter votre matériel. Le golf de Biscarrosse est un très beau parcours en forêt landaise, accessible aux débutants comme aux confirmés.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★☆</span>
-            <span>4,3</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
+          <p class="card-desc">Un sac avec demi-série de clubs et chariot est disponible à la maison — pas besoin d'apporter votre matériel. Beau parcours en forêt landaise, accessible aux débutants comme aux confirmés.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=golf+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-photo-placeholder">🌲</div>
+        <div class="card-placeholder">🌲</div>
         <div class="card-body">
           <span class="card-tag">Balade · Forêt landaise</span>
           <h3 class="card-name">Balades en forêt</h3>
           <p class="card-desc">Accessibles depuis plusieurs chemins autour de la maison. Pins maritimes, senteurs résineuses, calme absolu. Idéal le matin tôt ou en fin d'après-midi. Attention aux moustiques en soirée — prévoyez un répulsif.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★★</span>
-            <span>4,9</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=sentiers+forêt+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-photo-placeholder">💦</div>
+        <div class="card-placeholder">💦</div>
         <div class="card-body">
           <span class="card-tag">Parc aquatique · En famille</span>
           <h3 class="card-name">Aqualand Biscarrosse</h3>
-          <p class="card-desc">L'incontournable de l'été en famille. Prévoir la journée entière. Combinez avec un dîner au Latécoère ou un apéro chez Kiki pour une soirée parfaite. Tickets moins chers en ligne et en dehors des week-ends.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★☆</span>
-            <span>4,1</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
+          <p class="card-desc">L'incontournable de l'été en famille. Prévoir la journée entière. Combinez avec un dîner au Latécoère ou un apéro chez Kiki pour une soirée parfaite. Tickets moins chers réservés en ligne.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=aqualand+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
             <a href="https://www.aqualand.fr/biscarrosse" target="_blank" rel="noopener" class="card-link">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              Site officiel
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-wide">
+        <div class="card-placeholder">✈️</div>
+        <div class="card-body">
+          <span class="card-tag">Lac de Biscarrosse-Parentis · En voiture · Histoire</span>
+          <h3 class="card-name">Base d'hydravions de Biscarrosse</h3>
+          <p class="card-desc">Dans les années 1930-40, Biscarrosse était le plus grand port d'hydravions d'Europe. C'est depuis le lac de Biscarrosse-Parentis que décollaient les appareils Latécoère et Farman reliant l'Europe à l'Amérique du Sud et à l'Afrique — une époque où traverser l'Atlantique tenait de l'exploit. Le musée de l'hydraviation retrace cette histoire fascinante, avec des hydravions restaurés et des archives exceptionnelles. Un détour qui surprend toujours — et qui explique au passage pourquoi le restaurant du bord du lac s'appelle le Latécoère.</p>
+          <div class="card-links">
+            <a href="https://www.google.com/maps/search/?api=1&query=musée+hydraviation+biscarrosse" target="_blank" rel="noopener" class="card-link">
+              <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+              Google Maps
+            </a>
+            <a href="https://www.musee-hydraviation.com" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
               Site officiel
             </a>
@@ -732,86 +683,66 @@
       <span class="cat-icon">🛒</span>
       <h2 class="cat-title">Courses & marchés</h2>
     </div>
-    <div class="tip-banner">
+    <div class="tip">
       <strong>Conseil :</strong> évitez le Leclerc le dimanche et le lundi — beaucoup de monde et rayons souvent vides. Préférez les adresses ci-dessous.
     </div>
     <div class="cards">
 
       <div class="card card-wide">
-        <div class="card-photo-placeholder">🥦</div>
+        <div class="card-placeholder">🥦</div>
         <div class="card-body">
-          <span class="card-tag">Primeur · À vélo · Navarrosse</span>
+          <span class="card-tag">Primeur · Navarrosse · À vélo · Coup de cœur</span>
           <h3 class="card-name">Lipopette</h3>
-          <p class="card-desc">Le secret des habitués — fillez à vélo jusqu'à Navarrosse chez ce primeur. Fraîcheur garantie, prix attractifs. Et en prime : rôtisserie, huîtres, glaces et café. Un arrêt qui peut se transformer en déjeuner complet. Notre adresse préférée pour les courses fraîches.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★★</span>
-            <span>4,8</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
+          <p class="card-desc">Le secret des habitués — filez à vélo jusqu'à Navarrosse. Fraîcheur garantie, prix attractifs. Et en prime : rôtisserie, huîtres, glaces et café. Un arrêt qui peut facilement se transformer en déjeuner complet. Notre adresse préférée pour les courses fraîches.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=lipopette+navarrosse+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-photo-placeholder">🏪</div>
+        <div class="card-placeholder">🏪</div>
         <div class="card-body">
           <span class="card-tag">Marché couvert</span>
           <h3 class="card-name">Les Halles</h3>
-          <p class="card-desc">Le marché couvert de Biscarrosse — producteurs locaux, fromages, charcuterie, fruits et légumes de saison. L'ambiance marché du Sud-Ouest au meilleur de l'été. Idéal le matin en semaine.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★☆</span>
-            <span>4,3</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
+          <p class="card-desc">Le marché couvert de Biscarrosse — producteurs locaux, fromages, charcuterie, fruits et légumes de saison. L'ambiance marché du Sud-Ouest au meilleur de l'été. Idéal en semaine le matin.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=les+halles+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-photo-placeholder">🇮🇹</div>
+        <div class="card-placeholder">🇮🇹</div>
         <div class="card-body">
           <span class="card-tag">Épicerie fine</span>
           <h3 class="card-name">L'épicerie italienne</h3>
-          <p class="card-desc">De très bons produits familiaux — pâtes, huiles, conserves, fromages. L'endroit parfait pour rapporter de belles choses ou cuisiner un dîner maison haut de gamme sans effort.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★★</span>
-            <span>4,6</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
+          <p class="card-desc">De très bons produits familiaux — pâtes, huiles, conserves. L'endroit parfait pour cuisiner un dîner maison haut de gamme ou rapporter de belles choses dans ses valises.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=épicerie+italienne+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-photo-placeholder">🍷</div>
+        <div class="card-placeholder">🍷</div>
         <div class="card-body">
           <span class="card-tag">Vins · Artisanal local</span>
           <h3 class="card-name">Le viticulteur local</h3>
-          <p class="card-desc">De très bons crus locaux et un vermouth maison qui est une jolie réinterprétation à essayer absolument. L'occasion de découvrir la viticulture landaise et de repartir avec quelques bouteilles dans la valise.</p>
-          <div class="card-rating">
-            <span class="stars">★★★★★</span>
-            <span>4,7</span>
-            <span class="rating-count">· Google Maps</span>
-          </div>
+          <p class="card-desc">De très bons crus locaux et un vermouth maison à essayer absolument — une jolie réinterprétation à la landaise. Repartez avec quelques bouteilles dans la valise.</p>
           <div class="card-links">
             <a href="https://www.google.com/maps/search/?api=1&query=viticulteur+biscarrosse" target="_blank" rel="noopener" class="card-link">
               <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 21c4-3.5 7-7 7-11a7 7 0 1 0-14 0c0 4 3 7.5 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-              Voir sur Maps
+              Google Maps
             </a>
           </div>
         </div>
@@ -821,7 +752,7 @@
   </div>
 </section>
 
-<!-- ================= CTA RÉSERVER ================= -->
+<!-- ================= CTA ================= -->
 <section style="padding:72px 0; background:var(--sable); text-align:center;">
   <div class="container">
     <p class="eyebrow">Les Jasmins d'Ispe</p>
